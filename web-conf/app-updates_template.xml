@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-01-28T10:43:15Z</date>
+    <date>2017-01-28T11:29:29Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -30,7 +30,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>apt.security</key>
-                    <delay>3600</delay>
+                    <delay>900</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -73,7 +73,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>apt.updates</key>
-                    <delay>3600</delay>
+                    <delay>900</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
