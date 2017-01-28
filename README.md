@@ -1,7 +1,9 @@
-Zabbix template for monitoring APT package updates
+Zabbix template for monitoring APT package updates.
+
+This template uses `-s` simulation option when invoking `apt-get`, so no root access is needed for Zabbix user during polling.
 
 # Notes
-Root access is required for updating APT repositories. Since Zabbix runs under a dedicated user, it can be done either by using `sudo` in agent configuration script below, using a dedicated `crontab` entry to invoke `apt-get update` periodically or use `APT::Periodic` functionality bundled inside the APT system itself. Support for the `APT::Periodic` is included in this setup.
+However, root access is required for updating APT repositories. Since Zabbix runs under a dedicated user, it can be done either by using `sudo` in agent configuration script below, using a dedicated `crontab` entry to invoke `apt-get update` periodically or use `APT::Periodic` functionality bundled inside the APT system itself. Support for the `APT::Periodic` is included in this setup.
 
 Since `APT::Periodic` is executed via already existing APT maintenace script located in `cron.daily`, the minimum period of updating  repositories is once a day. If shorter period is required, a spearate `cron.hourly` script is needed instead.
 
