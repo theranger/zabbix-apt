@@ -11,4 +11,4 @@ Since `APT::Periodic` is executed via already existing APT maintenace script loc
 # Installation
 1. Copy `apt.conf.d/02periodic` script to `/etc/apt/apt.conf.d` directory to configure daily automatic package repository updates using `APT::Periodic`.
 2. Copy `zabbix_agentd.d/apt.conf` to the Zabbix agent's configuration directory (usually located in `/etc/zabbix`).
-3. Import `web-config/apt-updates_template.xml` to Zabbix frontend.
+3. Import `templates/apt-updates.xml` to Zabbix frontend.
