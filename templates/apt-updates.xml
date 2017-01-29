@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-01-28T11:29:29Z</date>
+    <date>2017-01-29T14:52:23Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -122,7 +122,7 @@
             <expression>{Template App APT Updates:apt.security.last()}&gt;0 and {Template App APT Updates:apt.updates.last()}&gt;0</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
-            <name>{ITEM.LASTVALUE&lt;1&gt;} security and {ITEM.LASTVALUE&lt;2&gt;} non-critical updates on {HOST.NAME}</name>
+            <name>{ITEM.LASTVALUE1} security and {ITEM.LASTVALUE2} regular updates on {HOST.NAME}</name>
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
@@ -138,7 +138,7 @@
             <expression>{Template App APT Updates:apt.updates.last()}&gt;0 and {Template App APT Updates:apt.security.last()}=0</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
-            <name>{ITEM.LASTVALUE} non-critical updates on {HOST.NAME}</name>
+            <name>{ITEM.LASTVALUE} regular updates on {HOST.NAME}</name>
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
