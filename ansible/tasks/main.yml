@@ -1,3 +1,4 @@
+---
 - name: Importing apt.conf configuration file for zabbix
   copy:
     src: ../../zabbix_agentd.d/apt.conf
