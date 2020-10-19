@@ -1,0 +1,25 @@
+- name: Importing apt.conf configuration file for zabbix
+  copy:
+    src: ../../zabbix_agentd.d/apt.conf
+    dest: /etc/zabbix/zabbix_agentd.d/apt.conf
+
+- name: Importing 02periodic apt configuration file
+  copy:
+    src: ./../apt.conf.d/02periodic
+    dest: /etc/apt/apt.conf.d/02periodic
+
+- name: restart zabbix-agent 
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: zabbix-agent
+
+- name: enable service zabbix-agent
+  systemd:
+    name: zabbix-agent
+    enabled: yes
+
+- name: Make sure zabbix-agent service is running
+  systemd:
+    state: started
+    name: zabbix-agent
